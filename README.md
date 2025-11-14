@@ -59,6 +59,7 @@ git add --chmod=+x -- external\board\rpi\rootfs_overlay\etc\init.d\S00modules
 git add --chmod=+x -- external\package\aic8800\S25btattach
 git add --chmod=+x -- external\rootfs_overlay\etc\default\dropbear
 git add --chmod=+x -- external\rootfs_overlay\etc\init.d\rcS
+git add --chmod=+x -- external\rootfs_overlay\etc\init.d\S92usb_gadget
 git add --chmod=+x -- external\rootfs_overlay\etc\init.d\S39cfg-prepare
 git add --chmod=+x -- external\rootfs_overlay\etc\init.d\S40eth_config
 git add --chmod=+x -- external\rootfs_overlay\etc\overlay_init

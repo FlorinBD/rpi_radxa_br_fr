@@ -40,26 +40,33 @@ You can flash this image directly to an SD card using dd, [balenaEtcher](https:/
 ```bash
 git config core.fileMode false
 
-git add --chmod=+x -- external/board/aaw2b/rootfs_overlay/etc/init.d/S10rtk_hciattach
-git add --chmod=+x -- external/board/common/add_tty1.sh
-git add --chmod=+x -- external/board/common/add_usb_serial.sh
-git add --chmod=+x -- external/board/common/generate-issue.sh
-git add --chmod=+x -- external/board/qemu/post-build.sh
-git add --chmod=+x -- external/board/qemu/post-image.sh
-git add --chmod=+x -- external/board/radxa03w/rootfs_overlay/etc/init.d/S00modules
-git add --chmod=+x -- external/board/radxa03w/rootfs_overlay/etc/init.d/S27rfkill
-git add --chmod=+x -- external/board/rpi/rootfs_overlay/etc/init.d/S00modules
-git add --chmod=+x -- external/package/aic8800/S25btattach
-git add --chmod=+x -- external/rootfs_overlay/etc/default/dropbear
-git add --chmod=+x -- external/rootfs_overlay/etc/init.d/rcS
-git add --chmod=+x -- external/rootfs_overlay/etc/init.d/S39cfg-prepare
-git add --chmod=+x -- external/rootfs_overlay/etc/init.d/S40eth_config
-git add --chmod=+x -- external/rootfs_overlay/etc/overlay_init
 git add --chmod=+x -- build-image.sh
 git add --chmod=+x -- docker-dev.sh
-
-
-git add --chmod=+x -- external/scripts/defconfig_merger.sh
+git add --chmod=+x -- external\board\aaw2b\post-image.sh
+git add --chmod=+x -- external\board\aaw2b\rootfs_overlay\etc\init.d\S10rtk_hciattach
+git add --chmod=+x -- external\board\common\add_tty1.sh
+git add --chmod=+x -- external\board\common\add_usb_serial.sh
+git add --chmod=+x -- external\board\common\generate-issue.sh
+git add --chmod=+x -- external\board\common\post-build.sh
+git add --chmod=+x -- external\board\qemu\post-build.sh
+git add --chmod=+x -- external\board\qemu\post-image.sh
+git add --chmod=+x -- external\board\radxa03w\post-image.sh
+git add --chmod=+x -- external\board\radxa03w\rootfs_overlay\etc\init.d\S00modules
+git add --chmod=+x -- external\board\radxa03w\rootfs_overlay\etc\init.d\S27rfkill
+git add --chmod=+x -- external\board\rpi\post-build.sh
+git add --chmod=+x -- external\board\rpi\post-image.sh
+git add --chmod=+x -- external\board\rpi\rootfs_overlay\etc\init.d\S00modules
+git add --chmod=+x -- external\package\aic8800\S25btattach
+git add --chmod=+x -- external\rootfs_overlay\etc\default\dropbear
+git add --chmod=+x -- external\rootfs_overlay\etc\init.d\rcS
+git add --chmod=+x -- external\rootfs_overlay\etc\init.d\S39cfg-prepare
+git add --chmod=+x -- external\rootfs_overlay\etc\init.d\S40eth_config
+git add --chmod=+x -- external\rootfs_overlay\etc\overlay_init
+git add --chmod=+x -- external\rootfs_overlay\etc\S92usb_gadget.in
+git add --chmod=+x -- external\scripts\defconfig_merger.sh
+git add --chmod=+x -- tools\aaw\flash.sh
+git add --chmod=+x -- tools\aaw\rkdownload.sh
+git add --chmod=+x -- tools\aaw\upgrade_tool
 
 git commit -m "Make file executable"
 

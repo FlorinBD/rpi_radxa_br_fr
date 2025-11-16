@@ -18,12 +18,10 @@ jobs:
         board: [radxa03w]
 
     steps:
-      - name: Update secrets
-        uses: actions/checkout@v4
-        with:
-          repository: "FlorinBD/aa-mirror-rs"
-          token: ${{ secrets.RAT }}
-          #path: '/app/buildroot/dl/aa-mirror-rs'
+      - name: Clone aa-mirror-rs
+        run: ./clone_aa_mirror.sh
+        env:
+          RAT: ${{ secrets.RAT }}
 
       - name: Delete huge unnecessary tools folder
         run: rm -rf /opt/hostedtoolcache

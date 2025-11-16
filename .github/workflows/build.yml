@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Clone aa-mirror-rs
-        run: ./clone_aa_mirror.sh
+        run: ./clone-private-repo.sh
         env:
           RAT: ${{ secrets.RAT }}
 

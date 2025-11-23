@@ -21,7 +21,7 @@ AA_PROXY_RS_CARGO_ENV = \
 
 # default config file generator
 define AA_PROXY_RS_GENERATE_CONFIG
-    cd $(@D) && env PATH=$${PATH}:$(HOST_DIR)/bin cargo run --release --bin generate_config
+    cd $(@D) && env PATH=$${PATH}:$(HOST_DIR)/bin cargo update -w && env PATH=$${PATH}:$(HOST_DIR)/bin cargo run --release --bin generate_config
 endef
 AA_PROXY_RS_POST_BUILD_HOOKS += AA_PROXY_RS_GENERATE_CONFIG
 
